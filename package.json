@@ -1,18 +1,22 @@
 {
   "name": "deep-mutate",
-  "version": "0.0.0",
-  "description": "",
-  "keywords": [],
+  "version": "0.0.1",
+  "description": "Mutates frozen object by passing selective fields recursively",
+  "keywords": [
+    "Mutate",
+    "Immutable",
+    "Freeze"
+  ],
   "main": "dist/deep-mutate.umd.js",
   "module": "dist/deep-mutate.es5.js",
   "typings": "dist/types/deep-mutate.d.ts",
   "files": [
     "dist"
   ],
-  "author": " <>",
+  "author": "Vamshi Krishna Pothuka <pvamshi@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/pvamshi/deep-mutate"
   },
   "license": "MIT",
   "engines": {
