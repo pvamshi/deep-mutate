@@ -1,6 +1,6 @@
 {
   "name": "deep-mutate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mutates frozen object by passing selective fields recursively",
   "keywords": [
     "Mutate",

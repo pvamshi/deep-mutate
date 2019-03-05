@@ -89,4 +89,18 @@ describe('mutate test', () => {
     })
     expect(Object.isFrozen(result)).toBeTruthy()
   })
+
+  test('Add non-existant key', () => {
+    const frozen = Object.freeze({})
+    const result = mutate(frozen, {
+      name: ['Bruce'],
+      lastname: 'Waine',
+      address: { city: 'Gotham', country: 'US', street: 'Mountain Drive' }
+    })
+    expect(result).toEqual({
+      name: ['Bruce'],
+      lastname: 'Waine',
+      address: { city: 'Gotham', country: 'US', street: 'Mountain Drive' }
+    })
+  })
 })

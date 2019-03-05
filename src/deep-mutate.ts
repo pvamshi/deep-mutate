@@ -11,7 +11,7 @@
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> }
 
 function mutate<T>(obj: T, partial: RecursivePartial<T> | undefined | null): T {
-  if (!partial || !obj) {
+  if (!partial) {
     return obj
   }
 
@@ -35,7 +35,7 @@ function mutate<T>(obj: T, partial: RecursivePartial<T> | undefined | null): T {
       ) {
         updated[key] = element
       } else {
-        updated[key] = mutate(obj[key], element)
+        updated[key] = mutate(obj && obj[key] ? obj[key] : {}, element)
       }
     }
   }
